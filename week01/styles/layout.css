@@ -25,13 +25,15 @@ header h1 {
 header nav {
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     background-color: black;
+    flex: 1 1 auto;
 }
 header nav a {
     color: white;
     text-decoration: none;
+    flex: 1;
 }
 main {
     background-color: #dedede;
