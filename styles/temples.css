@@ -1,0 +1,143 @@
+:root {
+    --body-bg-color: #fefae0;
+    --heading-bg-color: #606c38;
+    --heading-text: #ffffff;
+    --nav-bg-color: #283618;
+    --nav-link-border-color: #000;
+    --nav-link-bg-color: #606c38;
+    --nav-text: #ffffff;
+    --h1-text-color: #283618;
+    --card-border-color: #bc6c25;
+    --card-heading-bg-color: #dda15e;
+    --card-heading-text-color: #000;
+    --card-body-bg-color: #fff;
+    --footer-bg-color: #bc6c25;
+    --footer-text-color: #000;
+    --img-border-color: #bc6c25;
+    --img-shadow-color: #bc6c2533;
+    --body-link-text-color: #283618;
+    --body-link-hover-text-color: #bc6c25;
+}
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13pt;
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: grid;
+    grid-template: auto 1fr auto / 1fr;
+    margin: 0px auto;
+    background-color: var(--body-bg-color);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--heading-bg-color);
+    position: relative;
+}
+header span {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--heading-text);
+}
+header nav {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background-color: var(--heading-bg-color);
+    width: 100%;
+}
+header nav.open {
+    display: flex;
+}
+header nav a {
+    color: var(--nav-text);
+    padding: 8px 16px;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+header nav a:hover {
+    background-color: var(--nav-bg-color);
+}
+#menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+	border: 0;
+    padding: 0;
+	background: none;
+	color: white;
+    vertical-align: bottom;
+    margin: 6px 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#menu::before {
+	content: "☰";
+}
+#menu.open {
+    font-size: 1.25rem;
+    margin: 10px 8px;
+}
+#menu.open::before { 
+	content: "❌";
+}
+header, main, footer {
+    min-width: 300px;
+}
+main {
+    display:grid;
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 0 16px;
+    gap: 10px;
+}
+main h1 {
+    color: var(--h1-text-color);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+figure img {
+    width: 100%;
+}
+figcaption {
+    font-size: 0.75rem;
+    text-align: center;
+}
+footer {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--footer-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer p {
+    color: var(--footer-text-color);
+}
+ul.body {
+    margin-left: 40px;
+}
+a.body {
+    color: var(--body-link-text-color);
+    text-decoration: none;
+}
+a.body:hover {
+    color: var(--body-link-hover-text-color);
+    text-decoration: underline;
+}
