@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details for Paraguay - Matt Handy</title>
+    <meta name="description" content="Country Details for Paraguay">
+    <meta name="author" content="Matt Handy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Paraguay</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/place-hero-large.webp" media="(min-width:800px)">
+            <img src="images/place-hero-small.webp" alt="Mate and Tereré are popular herbal teas that Paraguayans drink daily." width="350" height="525">
+        </picture>
+        <section class="data">
+            <div>
+                <h2>Data</h2>
+                <label>Area:</label>
+                <span>406,752 sq. kilometers</span>
+                <label>Population:</label>
+                <span>6.956 million</span>
+                <label>Capital:</label>
+                <span>Asunción</span>
+                <label>Languages:</label>
+                <span>Spanish, Guaraní</span>
+                <label>Currency:</label>
+                <span>Guaraní (PYG)</span>
+                <label>Time Zone:</label>
+                <span>UTC-3</span>
+                <label>Calling Code:</label>
+                <span>+595</span>
+                <label>Internet TLD:</label>
+                <span>.py</span>
+            </div>
+        </section>
+        <section class="weather">
+            <div>
+                <h2 class="partly-cloudy">Weather</h2>
+                <img src="images/icon-partly-cloudy.svg" width="70" height="70" alt="Partly Cloudy">
+                <label>Temperature:</label>
+                <span id="temperature"></span>
+                <label>Conditions:</label>
+                <span>Partly Cloudy</span>
+                <label>Wind:</label>
+                <span id="wind-speed"></span>
+                <label>Wind Chill:</label>
+                <span id="wind-chill"></span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> - Matt Handy - Villa Elisa, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
