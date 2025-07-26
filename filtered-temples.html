@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W02 Assignment - Temple Picture Album - Matt Handy</title>
+    <meta name="description" content="W02 Assignment - Temple Picture Album">
+    <meta name="author" content="Matt Handy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-medium.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav id="nav">
+            <a href="#" aria-label="Home" id="home_nav">Home</a>
+            <a href="#" aria-label="Old" id="old_nav">Old</a>
+            <a href="#" aria-label="New" id="new_nav">New</a>
+            <a href="#" aria-label="Large" id="large_nav">Large</a>
+            <a href="#" aria-label="Small" id="small_nav">Small</a>
+        </nav>
+        <button id="menu" aria-label="Main Menu"></button>
+    </header>
+    <main>
+        <h2 id="which_nav">Home</h2>
+        <div id="temple_list">
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> - Matt Handy - Villa Elisa, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

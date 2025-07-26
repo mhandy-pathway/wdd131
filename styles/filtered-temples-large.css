@@ -1,0 +1,21 @@
+@media screen and (min-width:1080px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav {
+        display: flex;
+        flex-direction: row;
+        position: unset;
+        width: unset;
+    }
+    header nav a {
+        border-radius: 15px;
+    }
+    #menu {
+        display: none;
+    }
+    div#temple_list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
