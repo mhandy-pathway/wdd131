@@ -1,0 +1,23 @@
+table {
+    padding: 0;
+    border-top: solid 1px #ccc;
+}
+th, td {
+    padding: 4px 8px;
+    text-align: center;
+}
+thead th {
+    background-color: black;
+    color: white;
+}
+thead th[scope=col] {
+    background-color: #444;
+}
+tbody th, tbody td {
+    border-left: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+tbody tr:nth-child(even) {
+    background-color: #dedede;
+}

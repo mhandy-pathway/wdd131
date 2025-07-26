@@ -1,0 +1,17 @@
+img {
+    display: block;
+    width: 400px;
+    height: 600px;
+    object-fit:cover;
+    background-color: black;
+    animation: fade 5s;
+    margin: 10px auto;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.75;
+    }
+}
