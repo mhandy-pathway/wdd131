@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W05 Assignment - Product Review Form - Matt Handy</title>
+    <meta name="description" content="W05 Assignment - Product Review Form">
+    <meta name="author" content="Matt Handy">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get" class="frm">
+            <fieldset>
+                <label>Product Name
+                    <select id="productName" name="productName" required>
+                        <option value="" selected disabled>Choose a Product ...</option>
+                    </select>
+                </label>
+                <span class="label">Overall Rating</span>
+                <label><input type="radio" id="overallRating1star" name="overallRating" value="1" required>⭐</label>
+                <label><input type="radio" id="overallRating2star" name="overallRating" value="2" required>⭐⭐</label>
+                <label><input type="radio" id="overallRating3star" name="overallRating" value="3" required>⭐⭐⭐</label>
+                <label><input type="radio" id="overallRating4star" name="overallRating" value="4" required>⭐⭐⭐⭐</label>
+                <label class="last"><input type="radio" id="overallRating5star" name="overallRating" value="5" required>⭐⭐⭐⭐⭐</label>
+                <label>Date of Installation
+                    <input type="date" id="dateOfInstallation" name="dateOfInstallation" required>
+                </label>
+                <span class="label">Which features did you find useful in the product?</span>
+                <span class="label italic">(Check all that apply)</span>
+                <label class="option"><input type="checkbox" id="usefulFeaturesDesign" name="usefulFeaturesDesign" value="1"> Design</label>
+                <label class="option"><input type="checkbox" id="usefulFeaturesDurability" name="usefulFeaturesDurability" value="1"> Durability</label>
+                <label class="option"><input type="checkbox" id="usefulFeaturesEaseOfUse" name="usefulFeaturesEaseOfUse" value="1"> Ease of Use</label>
+                <label class="option last"><input type="checkbox" id="usefulFeaturesPerformance" name="usefulFeaturesPerformance" value="1"> Performance</label>
+                <label>Written Review (Optional)
+                    <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+                </label>
+                <label>Your Name (Optional)
+                    <input type="text" id="userName" name="userName" value="">
+                </label>
+                <input type="submit" value="Send My Review">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> - Matt Handy - Villa Elisa, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
