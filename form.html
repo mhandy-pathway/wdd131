@@ -6,6 +6,9 @@
     <title>W05 Assignment - Product Review Form - Matt Handy</title>
     <meta name="description" content="W05 Assignment - Product Review Form">
     <meta name="author" content="Matt Handy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/form.js" defer></script>
@@ -17,18 +20,18 @@
     <main>
         <form action="review.html" method="get" class="frm">
             <fieldset>
-                <label>Product Name
+                <label>Product Name <span class="required">*</span>
                     <select id="productName" name="productName" required>
                         <option value="" selected disabled>Choose a Product ...</option>
                     </select>
                 </label>
-                <span class="label">Overall Rating</span>
+                <span class="label">Overall Rating <span class="required">*</span></span>
                 <label><input type="radio" id="overallRating1star" name="overallRating" value="1" required>⭐</label>
                 <label><input type="radio" id="overallRating2star" name="overallRating" value="2" required>⭐⭐</label>
                 <label><input type="radio" id="overallRating3star" name="overallRating" value="3" required>⭐⭐⭐</label>
                 <label><input type="radio" id="overallRating4star" name="overallRating" value="4" required>⭐⭐⭐⭐</label>
                 <label class="last"><input type="radio" id="overallRating5star" name="overallRating" value="5" required>⭐⭐⭐⭐⭐</label>
-                <label>Date of Installation
+                <label>Date of Installation <span class="required">*</span>
                     <input type="date" id="dateOfInstallation" name="dateOfInstallation" required>
                 </label>
                 <span class="label">Which features did you find useful in the product?</span>
@@ -37,14 +40,15 @@
                 <label class="option"><input type="checkbox" id="usefulFeaturesDurability" name="usefulFeaturesDurability" value="1"> Durability</label>
                 <label class="option"><input type="checkbox" id="usefulFeaturesEaseOfUse" name="usefulFeaturesEaseOfUse" value="1"> Ease of Use</label>
                 <label class="option last"><input type="checkbox" id="usefulFeaturesPerformance" name="usefulFeaturesPerformance" value="1"> Performance</label>
-                <label>Written Review (Optional)
+                <label>Written Review
                     <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
                 </label>
-                <label>Your Name (Optional)
+                <label>Your Name
                     <input type="text" id="userName" name="userName" value="">
                 </label>
                 <input type="submit" value="Send My Review">
             </fieldset>
+            <div class="required">* = Required Field</div>
         </form>
     </main>
     <footer>

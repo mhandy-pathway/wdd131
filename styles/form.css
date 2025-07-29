@@ -88,6 +88,17 @@ span.label,
 span.italic {
     font-style: italic;
 }
+span.required {
+    color: #900;
+    font-weight: bold;
+    font-style: italic;
+}
+div.required {
+    color: #900;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
 .frm label.option {
     color: black;
     font-weight: 400;
@@ -106,6 +117,20 @@ span.italic {
     color: #555;
     padding: 6px 12px;
     box-sizing: border-box;
+    border-radius: 10px;
+    border: solid 1px #333;
+}
+.frm input[type="text"]:required,
+.frm input[type="date"]:required,
+.frm select:required,
+.frm textarea:required {
+    border-bottom: solid 5px #900;
+}
+.frm input[type="text"]:required:valid,
+.frm input[type="date"]:required:valid,
+.frm select:required:valid,
+.frm textarea:required:valid {
+    border-bottom: solid 5px #090;
 }
 .frm input[type="submit"] {
     display: block;
