@@ -1,0 +1,121 @@
+:root {
+    --color1: #03045E;
+    --color2: #0077B6;
+    --color3: #CAF0F8;
+    --color4: white;
+    --color1-text: white;
+    --color2-text: white;
+    --color3-text: black;
+    --color4-text: black;
+}
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13pt;
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--color3);
+    height: 100%;
+}
+header {
+    background-color: var(--color1);
+    text-align: center;
+}
+main {
+    margin: 0 auto;
+    padding: 10px 20px;
+    min-width: 400px;
+    max-width: 800px;
+    background-color: white;
+    box-sizing: border-box;
+}
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--color1-text);
+    margin: 20px;
+    text-transform: uppercase;
+}
+h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--color2);
+    margin-top: 20px;
+}
+h2:first-child {
+    margin-top: 0;
+}
+div.schema {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+div.schema div {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    border: solid 1px black;
+    border-top: none;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+div.schema div:first-child {
+    border-top: solid 1px black;
+}
+div.schema p {
+    padding-left: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+div.typography {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+div.typography span:nth-child(odd) {
+    text-align: right;
+    font-weight: 600;
+    color: var(--color2);
+}
+strong {
+    font-weight: 600;
+}
+ul {
+    margin-left: 30px;
+}
+.color1 {
+    background-color: var(--color1);
+    color: var(--color1-text);
+}
+.color2 {
+    background-color: var(--color2);
+    color: var(--color2-text);
+}
+.color3 {
+    background-color: var(--color3);
+    color: var(--color3-text);
+}
+.color4 {
+    background-color: var(--color4);
+    color: var(--color4-text);
+}
+img.fullwidth {
+    width: 100%;
+}
+footer {
+    background-color: var(--color2);
+    color: var(--color2-text);
+    text-align: center;
+    padding: 10px;
+}
