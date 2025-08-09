@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBI - Journal Management</title>
+    <meta name="description" content="ROBI - Journal Management">
+    <meta name="author" content="Matt Handy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/robi.css">
+    <link rel="stylesheet" href="styles/robi-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/journal.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div id="h1">
+            <span id="preh1"></span>
+            <h1>ROBI | JOURNAL</h1>
+            <span id="posth1"></span>
+            <span id="menu"></span>
+        </div>
+        <nav id="nav">
+            <a href="index.html">Dashboard</a>
+            <a href="goals.html">Goals</a>
+            <a href="tasks.html">Tasks</a>
+            <a href="journal.html" class="active">Journal</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2><span class="headline">Add A New Journal Entry</span></h2>
+            <div>
+                <form class="new_entry">
+                    <strong>Include Image:</strong>
+                    <label><input type="radio" name="image_type" id="radio_no_image" checked> None</label>
+                    <label><input type="radio" name="image_type" id="radio_url_image"> From URL</label>
+                    <label><input type="radio" name="image_type" id="radio_upload_image"> Upload</label>
+                    <label class="hidden field" id="label_url_image"><strong>Image URL:</strong><input type="text" id="input_url_image"></label>
+                    <label class="hidden field" id="label_upload_image"><strong>Image Upload:</strong><input type="file" id="input_upload_image"></label>
+                    <label class="field"><strong>Subject:</strong><input type="text" id="entry_subject"></label>
+                    <label for="entry_text">Journal Entry:</label>
+                    <textarea id="entry_text" rows="5"></textarea>
+                    <input type="button" value="Save Journal Entry" id="new_entry_submit">
+                </form>
+            </div>
+        </section>
+        <div id="journal_entries"></div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> - Matt Handy - Villa Elisa, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

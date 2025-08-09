@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBI - Goal Management</title>
+    <meta name="description" content="ROBI - Goal Management">
+    <meta name="author" content="Matt Handy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/robi.css">
+    <link rel="stylesheet" href="styles/robi-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/goals.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div id="h1">
+            <span id="preh1"></span>
+            <h1>ROBI | GOALS</h1>
+            <span id="posth1"></span>
+            <span id="menu"></span>
+        </div>
+        <nav id="nav">
+            <a href="index.html">Dashboard</a>
+            <a href="goals.html" class="active">Goals</a>
+            <a href="tasks.html">Tasks</a>
+            <a href="journal.html">Journal</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2><span class="headline">Add A New Category</span></h2>
+            <div>
+                <form class="new_category">
+                    <label>New Category: <input type="text" id="new_category_name"></label>
+                    <input type="button" value="➕" id="new_category_submit">
+                </form>
+            </div>
+        </section>
+        <div id="goal_categories"></div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> - Matt Handy - Villa Elisa, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

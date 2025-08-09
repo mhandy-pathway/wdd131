@@ -1,0 +1,335 @@
+:root {
+    --color1: #03045E;
+    --color2: #0077B6;
+    --color3: #CAF0F8;
+    --color4: white;
+    --color1-text: white;
+    --color2-text: white;
+    --color3-text: black;
+    --color4-text: black;
+}
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13pt;
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--color3);
+    height: 100%;
+}
+header {
+    background-color: var(--color1);
+    text-align: center;
+    position: relative;
+}
+main {
+    margin: 0 auto;
+    padding: 10px 20px;
+    min-width: 400px;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--color1-text);
+    margin: 20px;
+    text-transform: uppercase;
+}
+h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--color2);
+    margin-top: 20px;
+}
+h2:first-child {
+    margin-top: 0;
+}
+div.schema {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+div.schema div {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    border: solid 1px black;
+    border-top: none;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+div.schema div:first-child {
+    border-top: solid 1px black;
+}
+div.schema p {
+    padding-left: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+div.typography {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+div.typography span:nth-child(odd) {
+    text-align: right;
+    font-weight: 600;
+    color: var(--color2);
+}
+strong {
+    font-weight: 600;
+}
+ul {
+    margin-left: 30px;
+}
+.color1 {
+    background-color: var(--color1);
+    color: var(--color1-text);
+}
+.color2 {
+    background-color: var(--color2);
+    color: var(--color2-text);
+}
+.color3 {
+    background-color: var(--color3);
+    color: var(--color3-text);
+}
+.color4 {
+    background-color: var(--color4);
+    color: var(--color4-text);
+}
+img.fullwidth {
+    width: 100%;
+}
+#h1 {
+    display: grid;
+    grid-template-columns: 55px 1fr 55px;
+}
+#preh1, #posth1 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+#preh1::before {
+    content: ""
+}
+#posth1 {
+    display: none;
+}
+#menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+	border: 0;
+    padding: 0;
+	background: none;
+	color: white;
+    vertical-align: bottom;
+    margin: 20px;
+}
+#menu::before {
+    content: "☰"
+}
+#menu.open {
+    font-size: 1.25rem;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+#menu.open::before { 
+	content: "❌";
+}
+header nav {
+    display:none;
+}
+header nav.open {
+    background-color: var(--color2);
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+}
+header nav a {
+    color: var(--color4);
+    text-decoration: none;
+    padding: 6px 12px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    border: solid 1px var(--color2);
+}
+header nav a.active {
+    background-color: var(--color1);
+    border: solid 1px var(--color4);
+}
+header nav a:hover {
+    background-color: var(--color1);
+    border: solid 1px var(--color4);
+}
+main.dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+main.dashboard > div > h2 {
+    color: var(--color1);
+    margin: 10px;
+}
+main section {
+    margin: 10px;
+}
+main section h2 {
+    background-color: var(--color1);
+    color: var(--color1-text);
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 10px 10px 0px 0px;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 1fr 15px 15px 15px;
+}
+main section.entry h2 {
+    grid-template-columns: 1fr 15px;
+}
+main section h2 span.headline {
+    text-align: center;
+    font-weight: 700;
+    margin-left: 45px;
+}
+main section.entry h2 span.headline {
+    margin-left: 15px;
+}
+form {
+    text-align:center;
+}
+form.new_entry {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+form.new_entry label, form.new_entry strong {
+    text-align: left;
+    font-weight: 700;
+    margin: 4px 0px;
+}
+form.new_entry label.field {
+    display: grid;
+    grid-template-rows: auto;
+    column-gap: 10px;
+}
+form.new_entry label.field input {
+    box-sizing: border-box;
+    width: 100%;
+}
+form.new_entry textarea, form.new_entry input[type="button"] {
+    margin: 4px 0px;
+}
+form.new_entry textarea {
+    border: solid 1px var(--color1);
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-size: .75 rem;
+}
+form.new_entry label.hidden {
+    display: none;
+}
+input[type="text"] {
+    width: 125px;
+    border: solid 1px var(--color1);
+    border-radius: 5px;
+    font-size: .75rem;
+    padding: 3px 6px;
+}
+input[type="button"] {
+    background-color: var(--color2);
+    color: transparent;
+    text-shadow: 0 0 0 var(--color4);
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: var(--color1);
+}
+h2 span.up, h2 span.down, h2 span.delete {
+    color: var(--color4);
+    cursor: pointer;
+}
+section.category:not(:first-child) h2 span.up:before {
+    content: "⬆";
+}
+section.category:not(:last-child) h2 span.down:before {
+    content: "⬇";
+}
+section.category h2 span.delete:before {
+    font-size: .75rem;
+    content: "❌";
+}
+section.entry h2 span.delete:before {
+    font-size: .75rem;
+    content: "❌";
+}
+main section > div {
+    border: solid 1px black;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 6px 12px;
+    background-color: white;
+}
+main section.entry > div {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+main section.entry div span.text {
+    font-size: 1.4rem;
+}
+main section.entry div span.date {
+    font-size: .75rem;
+    color: #333;
+    font-style:italic;
+    margin: 10px 0px;
+}
+main section.entry div img {
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+span.category {
+    display: grid;
+    grid-template-columns: 1fr 15px 15px 15px;
+}
+span.task {
+    grid-template-columns: 30px 1fr 15px 15px 15px;
+}
+span.up, span.down, span.delete {
+    color: var(--color2);
+    cursor: pointer;
+}
+span.goal span:first-child:before {
+    content: "🔸 ";
+}
+span.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+span.category:not(:first-child) span.up:before {
+    content: "⬆";
+}
+span.category:not(:last-child) span.down:before {
+    content: "⬇";
+}
+span.category span.delete:before {
+    font-size: .75rem;
+    content: "❌";
+}
+footer {
+    background-color: var(--color2);
+    color: var(--color2-text);
+    text-align: center;
+    padding: 10px;
+}

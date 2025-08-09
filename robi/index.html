@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBI - Dashboard</title>
+    <meta name="description" content="ROBI - Dashboard">
+    <meta name="author" content="Matt Handy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/robi.css">
+    <link rel="stylesheet" href="styles/robi-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/index.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div id="h1">
+            <span id="preh1"></span>
+            <h1>ROBI | DASHBOARD</h1>
+            <span id="posth1"></span>
+            <span id="menu"></span>
+        </div>
+        <nav id="nav">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="goals.html">Goals</a>
+            <a href="tasks.html">Tasks</a>
+            <a href="journal.html">Journal</a>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <div>
+            <h2>Goals</h2>
+            <div id="goal_div"></div>
+        </div>
+        <div>
+            <h2>Tasks</h2>
+            <div id="task_div"></div>
+        </div>
+        <div>
+            <h2>Latest Journal Entries</h2>
+            <div id="entry_div"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> - Matt Handy - Villa Elisa, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
